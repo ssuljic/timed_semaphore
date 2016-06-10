@@ -6,25 +6,26 @@ A TimedSemaphore is a specialized implementation of a Semaphore that gives a num
 
 ### Installation
 
-		gem install timed_semaphore
+	gem install timed_semaphore
 
 ### Usage
 
 Here is a basic example of using a TimedSemaphore
-		require 'timed_semaphore'
+```ruby
+require 'timed_semaphore'
 
-		threads = []
-		semaphore = TimedSemaphore.new(2, 3)
+threads = []
+semaphore = TimedSemaphore.new(2, 3)
 
-		10.times do
-		  threads << Thread.new do
-		    semaphore.acquire
-		    puts Time.now
-		  end
-		end
+10.times do
+  threads << Thread.new do
+    semaphore.acquire
+    puts Time.now
+  end
+end
 
-		threads.map(&:join)
-
+threads.map(&:join)
+```
 ### Copyright
 
 Please refer to [LICENSE](https://github.com/ssuljic/timed_semaphore/blob/master/LICENSE).
