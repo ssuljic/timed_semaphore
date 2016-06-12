@@ -4,8 +4,6 @@
 
 A TimedSemaphore is a specialized implementation of a Semaphore that gives a number of permits in a given time frame. This gem is a Ruby implemention inspired by the Java implementation from the [Apache Commons Lang package](https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/concurrent/TimedSemaphore.html).
 
-For more info check out the [blog post](https://crondev.com/ruby-timedsemaphore/).
-
 ### Installation
 
 	gem install timed_semaphore
