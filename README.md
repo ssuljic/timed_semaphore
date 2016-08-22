@@ -17,10 +17,10 @@ require 'timed_semaphore'
 threads = []
 semaphore = TimedSemaphore.new(2, 3)
 
-10.times do
+10.times do |x|
   threads << Thread.new do
     semaphore.acquire
-    puts Time.now
+    puts "Thread #{x}: " + Time.now.to_s
   end
 end
 
