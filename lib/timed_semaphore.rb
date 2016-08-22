@@ -8,17 +8,17 @@
 # @author ssuljic
 #
 # @example
-# threads = []
-# semaphore = TimedSemaphore.new(2, 3)
+#   threads = []
+#   semaphore = TimedSemaphore.new(2, 3)
 #
-# 10.times do |x|
-#   threads << Thread.new do
-#     semaphore.acquire
-#     puts "Thread #{x}: " + Time.now.to_s
+#   10.times do |x|
+#     threads << Thread.new do
+#       semaphore.acquire
+#       puts "Thread #{x}: " + Time.now.to_s
+#     end
 #   end
-# end
 #
-# threads.map(&:join)
+#   threads.map(&:join)
 class TimedSemaphore
   # @param num_of_ops [Fixnum] Number of operations
   #   which should be allowed in a specified time frame.
